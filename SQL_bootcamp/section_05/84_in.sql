@@ -4,7 +4,7 @@
 * Question: How many orders were made by customer 
 * 7888, 1082, 12808, 9623
 */
-SELECT * 
+SELECT count(*) 
 FROM orders
 WHERE customerid in (7888, 1082, 12808, 9623)
 
@@ -15,6 +15,6 @@ WHERE customerid in (7888, 1082, 12808, 9623)
 * Question: How many cities are in the district of 
 * Zuid-Holland, Noord-Brabant and Utrecht?
 */
-SELECT * 
+SELECT count(*) 
 FROM city
 WHERE district in ('Zuid-Holland', 'Noord-Brabant', 'Utrecht')
