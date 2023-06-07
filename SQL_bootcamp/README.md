@@ -1,0 +1,2 @@
+# Task from Udemy SQL bootcamp
+Notes from the Udemy couse Complete SQL and Database Bootcamp: Zero to Mastery - [Link to course](https://www.udemy.com/course/complete-sql-databases-bootcamp-zero-to-mastery/)
