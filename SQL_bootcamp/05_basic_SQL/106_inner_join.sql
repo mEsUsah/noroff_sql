@@ -34,5 +34,5 @@ SELECT
     concat(employees.first_name, ' ', employees.last_name) AS Name,
     departments.dept_name AS Department
 FROM employees
-LEFT JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
-LEFT JOIN departments ON dept_emp.dept_no = departments.dept_no
+LEFT JOIN dept_emp USING(emp_no)
+LEFT JOIN departments USING(dept_no)
