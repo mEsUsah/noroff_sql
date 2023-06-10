@@ -7,7 +7,8 @@ SELECT
     CONCAT(employees.first_name),
     COUNT(titles.title)
 FROM employees
-left JOIN titles USING(emp_no)
+LEFT JOIN titles USING(emp_no)
+    WHERE EXTRACT(YEAR FROM employees.hire_date) > 1991
 GROUP BY employees.emp_no
     HAVING COUNT(titles.title) > 2
 
@@ -18,8 +19,8 @@ GROUP BY employees.emp_no
 *  Database: Employees
 */
 SELECT
-    CONCAT(employees.first_name, ' ', employees.last_name) AS NAME,
-    count(salaries.salary),
+    CONCAT(employees.first_name, ' ', employees.last_name) AS name,
+    count(salaries.salary) AS raises,
     departments.dept_name
 
 FROM employees
@@ -36,8 +37,8 @@ GROUP BY employees.emp_no, departments.dept_no
 *  Database: Employees
 */
 SELECT
-    CONCAT(employees.first_name, ' ', employees.last_name) AS NAME,
-    count(departments.dept_name)
+    CONCAT(employees.first_name, ' ', employees.last_name) AS name,
+    count(departments.dept_name) AS departments
 
 FROM employees
 LEFT JOIN dept_emp Using(emp_no)
